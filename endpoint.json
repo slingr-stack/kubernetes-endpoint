@@ -1,0 +1,40 @@
+{
+    "label": "Kubernetes",
+    "name": "kubernetes",
+    "apiVersion": "v1",
+    "internal": true,
+    "extendsFrom": "http",
+    "configurationType": "GLOBAL",
+    "deployment": {
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 256,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": false
+    },
+    "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/kubernetes.png",
+    "status": "DISABLED",
+    "allowedApps": ["platform"],
+    "stores": [],
+    "events": [],
+    "functions": [],
+    "configuration":[
+        {
+            "name": "apiUrl",
+            "label": "API URL",
+            "description": "The URL to find the Kubernetes API, like http://localhost:6500/api",
+            "type": "text"
+        },
+        {
+            "name": "apiVersion",
+            "label": "API version",
+            "description": "Version of the API to use, like v1",
+            "type": "text",
+            "defaultValue": "v1"
+        }
+    ]
+}
